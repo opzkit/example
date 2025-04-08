@@ -7,7 +7,7 @@ jobs:
     name: terrascan
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
       - name: Run Terrascan
         id: terrascan
         uses: tenable/terrascan-action@main
@@ -25,6 +25,6 @@ jobs:
           #webhook_url:
           #webhook_token:
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@b8d3b6e8af63cde30bdc382c0bc28114f4346c88 # v2
         with:
           sarif_file: terrascan.sarif
